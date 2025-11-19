@@ -1,0 +1,35 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <title>Kontakt</title>
+</head>
+<body>
+
+<nav>
+    <a href="/">Strona główna</a>
+    <a href="/o-nas">O nas</a>
+    <a href="/oferta">Oferta</a>
+    <a href="/kontakt">Kontakt</a>
+</nav>
+
+<h1>Kontakt</h1>
+
+<form action="/kontakt" method="POST">
+    <label>Imię:</label><br>
+    <input type="text" name="imie" required><br><br>
+
+    <label>Nazwisko:</label><br>
+    <input type="text" name="nazwisko" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Treść wiadomości:</label><br>
+    <textarea name="tresc" rows="5" cols="40"></textarea><br><br>
+
+    <button type="submit">Wyślij</button>
+</form>
+
+</body>
+</html>
