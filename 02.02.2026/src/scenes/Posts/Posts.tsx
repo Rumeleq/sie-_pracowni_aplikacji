@@ -6,7 +6,7 @@ import styles from "./Posts.module.scss"
 
 function Posts() {
   const [posts, setPosts] = useState<Array<Post>>([])
-  const [isLoading, setLoading] = useState(false)
+  const [isLoading, setLoading] = useState(true)
   const [isError, setError] = useState(false)
 
   useEffect(() => {
