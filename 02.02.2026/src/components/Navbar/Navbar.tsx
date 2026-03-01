@@ -1,17 +1,18 @@
 import styles from "./Navbar.module.scss";
+import {Link} from "react-router-dom";
 
 function Navbar() {
   return (
     <nav className={styles.Navbar}>
       <ul>
         <li>
-          <a href="#">Strona główna</a>
+          <Link to="/">Strona główna</Link>
         </li>
         <li>
-          <a href="#">Kategorie</a>
+          <Link to="/wpises">Wpisy</Link>
         </li>
         <li>
-          <a href="#">Wpisy</a>
+          <Link to="/contact">Kontakt</Link>
         </li>
       </ul>
     </nav>

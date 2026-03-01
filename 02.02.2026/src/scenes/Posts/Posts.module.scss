@@ -1,0 +1,57 @@
+.Posts {
+  width: 80%;
+  max-width: 1600px;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin-inline: auto;
+  padding-block: 4rem;
+
+  &Error {
+    font-size: 4rem;
+    color: #FF69B4;
+    text-transform: uppercase;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+  }
+
+  &Element {
+    padding: 1.5rem;
+    background-color: rgba(90, 193, 49, 0.11);
+    border: 0.1rem solid #FF69B4;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &Title {
+      font-size: 2rem;
+      color: darken(#FF69B4, 40);
+      margin-bottom: 1.5rem;
+    }
+
+    &Body {
+      font-size: 1.4rem;
+      color: #676767;
+      margin-bottom: 2rem;
+    }
+
+    &Link {
+      display: block;
+      width: fit-content;
+      background-color: #FF69B4;
+      color: #fff;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: darken(#FF69B4, 40);
+      }
+
+    }
+
+  }
+}
