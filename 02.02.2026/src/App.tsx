@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Contact from "./scenes/Contact";
 import Home from "./scenes/Home";
-import Posts from "./scenes/Posts"
+import Posts from "./scenes/Posts";
 import PostDetails from "./scenes/PostDetails";
 
 function App() {

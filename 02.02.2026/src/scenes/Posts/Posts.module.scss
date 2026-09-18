@@ -9,7 +9,7 @@
 
   &Error {
     font-size: 4rem;
-    color: #FF69B4;
+    color: #ff69b4;
     text-transform: uppercase;
     grid-column-start: 1;
     grid-column-end: 4;
@@ -19,7 +19,7 @@
   &Element {
     padding: 1.5rem;
     background-color: rgba(90, 193, 49, 0.11);
-    border: 0.1rem solid #FF69B4;
+    border: 0.1rem solid #ff69b4;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -27,7 +27,7 @@
 
     &Title {
       font-size: 2rem;
-      color: darken(#FF69B4, 40);
+      color: darken(#ff69b4, 40);
       margin-bottom: 1.5rem;
     }
 
@@ -40,7 +40,7 @@
     &Link {
       display: block;
       width: fit-content;
-      background-color: #FF69B4;
+      background-color: #ff69b4;
       color: #fff;
       border-radius: 0.5rem;
       text-decoration: none;
@@ -48,10 +48,8 @@
       transition: all 0.3s ease-in-out;
 
       &:hover {
-        background-color: darken(#FF69B4, 40);
+        background-color: darken(#ff69b4, 40);
       }
-
     }
-
   }
 }

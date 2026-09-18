@@ -1,11 +1,11 @@
-import styles from './Footer.module.scss'
+import styles from "./Footer.module.scss";
 
 function Footer() {
   return (
     <footer className={styles.Footer}>
-      Copyright &copy; { new Date().getFullYear() } | ZSK
+      Copyright &copy; {new Date().getFullYear()} | ZSK
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

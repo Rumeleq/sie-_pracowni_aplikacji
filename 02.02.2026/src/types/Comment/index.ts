@@ -1,1 +1,1 @@
-export type { default } from './Comment.ts'
+export type { default } from "./Comment.ts";
