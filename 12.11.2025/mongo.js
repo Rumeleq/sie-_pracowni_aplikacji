@@ -1,31 +1,31 @@
-const { MongoClient } = require("mongodb");
+const { MongoClient } = require("mongodb")
 
-let client = null;
-let db = null;
+let client = null
+let db = null
 
 async function connectMongo(uri, dbName) {
   if (client && db) {
-    return db;
+    return db
   }
   if (!uri || !dbName) {
-    return null;
+    return null
   }
-  client = new MongoClient(uri);
-  await client.connect();
-  db = client.db(dbName);
-  return db;
+  client = new MongoClient(uri)
+  await client.connect()
+  db = client.db(dbName)
+  return db
 }
 
 function getDb() {
-  return db;
+  return db
 }
 
 async function closeMongo() {
   if (client) {
-    await client.close();
-    client = null;
-    db = null;
+    await client.close()
+    client = null
+    db = null
   }
 }
 
-module.exports = { connectMongo, getDb, closeMongo };
+module.exports = { connectMongo, getDb, closeMongo }

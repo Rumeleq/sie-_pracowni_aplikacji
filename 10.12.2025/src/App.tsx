@@ -1,8 +1,8 @@
-import { Routes, Route } from "react-router-dom";
-import Page1 from "./pages/Page1";
-import Page2 from "./pages/Page2";
-import Page3 from "./pages/Page3";
-import "./App.css";
+import { Routes, Route } from "react-router-dom"
+import Page1 from "./pages/Page1"
+import Page2 from "./pages/Page2"
+import Page3 from "./pages/Page3"
+import "./App.css"
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route path="*" element={<div>{"Nie ma takiej strony oguem"}</div>} />
       </Routes>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

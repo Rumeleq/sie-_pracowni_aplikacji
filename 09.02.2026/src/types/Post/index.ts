@@ -1,1 +1,1 @@
-export type { default } from "./Post.ts";
+export type { default } from "./Post.ts"

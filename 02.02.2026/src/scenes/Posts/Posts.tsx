@@ -1,28 +1,28 @@
-import type Post from "../../types/Post";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import megamind from "../../assets/megamind.png";
-import styles from "./Posts.module.scss";
+import type Post from "../../types/Post"
+import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+import megamind from "../../assets/megamind.png"
+import styles from "./Posts.module.scss"
 
 function Posts() {
-  const [posts, setPosts] = useState<Array<Post>>([]);
-  const [isLoading, setLoading] = useState(true);
-  const [isError, setError] = useState(false);
+  const [posts, setPosts] = useState<Array<Post>>([])
+  const [isLoading, setLoading] = useState(true)
+  const [isError, setError] = useState(false)
 
   useEffect(() => {
-    setLoading(true);
+    setLoading(true)
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((response) => response.json())
       .then((data) => {
-        setPosts(data as Array<Post>);
+        setPosts(data as Array<Post>)
       })
       .catch(() => {
-        setError(true);
+        setError(true)
       })
       .finally(() => {
-        setLoading(false);
-      });
-  }, []);
+        setLoading(false)
+      })
+  }, [])
 
   return (
     <div className={styles.Posts}>
@@ -52,7 +52,7 @@ function Posts() {
         </>
       )}
     </div>
-  );
+  )
 }
 
-export default Posts;
+export default Posts

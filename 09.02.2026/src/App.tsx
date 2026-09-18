@@ -1,11 +1,11 @@
-import "./App.scss";
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Contact from "./scenes/Contact";
-import Home from "./scenes/Home";
-import Posts from "./scenes/Posts";
-import PostDetails from "./scenes/PostDetails";
+import "./App.scss"
+import { Routes, Route } from "react-router-dom"
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+import Contact from "./scenes/Contact"
+import Home from "./scenes/Home"
+import Posts from "./scenes/Posts"
+import PostDetails from "./scenes/PostDetails"
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
       </main>
       <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

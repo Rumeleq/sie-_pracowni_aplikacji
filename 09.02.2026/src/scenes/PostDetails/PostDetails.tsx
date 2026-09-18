@@ -1,12 +1,12 @@
-import type Post from "../../types/Post";
-import type User from "../../types/User";
-import type Comment from "../../types/Comment";
-import { useParams } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
-import styles from "../PostDetails/PostDetails.module.scss";
+import type Post from "../../types/Post"
+import type User from "../../types/User"
+import type Comment from "../../types/Comment"
+import { useParams } from "react-router-dom"
+import { useQuery } from "@tanstack/react-query"
+import styles from "../PostDetails/PostDetails.module.scss"
 
 function PostDetails() {
-  const { id } = useParams<{ id: string }>();
+  const { id } = useParams<{ id: string }>()
 
   const {
     data: post,
@@ -17,11 +17,11 @@ function PostDetails() {
     queryFn: async () => {
       const res = await fetch(
         `https://jsonplaceholder.typicode.com/posts/${id}`,
-      );
-      if (!res.ok) throw new Error("Network response was not ok");
-      return res.json();
+      )
+      if (!res.ok) throw new Error("Network response was not ok")
+      return res.json()
     },
-  });
+  })
 
   const {
     data: comments,
@@ -32,11 +32,11 @@ function PostDetails() {
     queryFn: async () => {
       const res = await fetch(
         `https://jsonplaceholder.typicode.com/posts/${id}/comments`,
-      );
-      if (!res.ok) throw new Error("Network response was not ok");
-      return res.json();
+      )
+      if (!res.ok) throw new Error("Network response was not ok")
+      return res.json()
     },
-  });
+  })
 
   const {
     data: user,
@@ -47,15 +47,15 @@ function PostDetails() {
     queryFn: async () => {
       const res = await fetch(
         `https://jsonplaceholder.typicode.com/users/${post?.userId}`,
-      );
-      if (!res.ok) throw new Error("Network response was not ok");
-      return res.json();
+      )
+      if (!res.ok) throw new Error("Network response was not ok")
+      return res.json()
     },
     enabled: !!post?.userId,
-  });
+  })
 
-  const isLoading = isPostLoading || isCommentsLoading || isUserLoading;
-  const isError = isPostError || isCommentsError || isUserError;
+  const isLoading = isPostLoading || isCommentsLoading || isUserLoading
+  const isError = isPostError || isCommentsError || isUserError
 
   return (
     <div className={styles.Posts}>
@@ -89,7 +89,7 @@ function PostDetails() {
         </>
       )}
     </div>
-  );
+  )
 }
 
-export default PostDetails;
+export default PostDetails

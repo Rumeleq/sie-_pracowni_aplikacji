@@ -1,4 +1,4 @@
-import styles from "./Navbar.module.scss";
+import styles from "./Navbar.module.scss"
 
 function Navbar() {
   return (
@@ -15,7 +15,7 @@ function Navbar() {
         </li>
       </ul>
     </nav>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar

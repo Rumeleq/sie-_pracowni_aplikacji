@@ -1,8 +1,8 @@
-import type Post from "../../types/Post";
-import { Link } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
-import megamind from "../../assets/megamind.png";
-import styles from "./Posts.module.scss";
+import type Post from "../../types/Post"
+import { Link } from "react-router-dom"
+import { useQuery } from "@tanstack/react-query"
+import megamind from "../../assets/megamind.png"
+import styles from "./Posts.module.scss"
 
 function Posts() {
   const {
@@ -12,13 +12,11 @@ function Posts() {
   } = useQuery<Post[]>({
     queryKey: ["posts"],
     queryFn: async () => {
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/posts",
-      );
-      if (!response.ok) throw new Error("Błąd pobierania postów");
-      return response.json();
+      const response = await fetch("https://jsonplaceholder.typicode.com/posts")
+      if (!response.ok) throw new Error("Błąd pobierania postów")
+      return response.json()
     },
-  });
+  })
 
   return (
     <div className={styles.Posts}>
@@ -48,7 +46,7 @@ function Posts() {
         </>
       )}
     </div>
-  );
+  )
 }
 
-export default Posts;
+export default Posts

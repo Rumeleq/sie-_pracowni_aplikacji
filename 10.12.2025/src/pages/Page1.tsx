@@ -1,11 +1,11 @@
-import { useState } from "react";
-import reactLogo from "../assets/react.svg";
-import witcher from "../assets/obrazek.jpg";
-import viteLogo from "/vite.svg";
-import "../App.css";
+import { useState } from "react"
+import reactLogo from "../assets/react.svg"
+import witcher from "../assets/obrazek.jpg"
+import viteLogo from "/vite.svg"
+import "../App.css"
 
 function Page1() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -31,7 +31,7 @@ function Page1() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  );
+  )
 }
 
-export default Page1;
+export default Page1
