@@ -13,7 +13,9 @@ const routes = {
   },
   "/json": (req, res) => {
     const data = { imie: "Jan", nazwisko: "Kowalski", wiek: 30 }
-    res.writeHead(200, { "Content-Type": "application/json; charset=utf-8" })
+    res.writeHead(200, {
+      "Content-Type": "application/json; charset=utf-8",
+    })
     res.end(JSON.stringify(data))
   },
   "/html": (req, res) => {
@@ -33,10 +35,14 @@ const routes = {
   "/plik": (req, res) => {
     fs.readFile("strona.html", (err, data) => {
       if (err) {
-        res.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" })
+        res.writeHead(500, {
+          "Content-Type": "text/plain; charset=utf-8",
+        })
         res.end("Błąd serwera – nie udało się wczytać pliku")
       } else {
-        res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" })
+        res.writeHead(200, {
+          "Content-Type": "text/html; charset=utf-8",
+        })
         res.end(data)
       }
     })
@@ -44,7 +50,9 @@ const routes = {
   "/get_params": (req, res) => {
     const params = url.parse(req.url, true).query
     console.log("Otrzymane parametry:", params)
-    res.writeHead(200, { "Content-Type": "application/json; charset=utf-8" })
+    res.writeHead(200, {
+      "Content-Type": "application/json; charset=utf-8",
+    })
     res.end(JSON.stringify({ ok: "ok" }))
     fs.writeFile(`params_${Date.now()}.json`, JSON.stringify(params), (err) => {
       if (err) console.error("Błąd zapisu pliku:", err)

@@ -12,7 +12,9 @@ const server = http.createServer((req, res) => {
       nazwisko: "Kowalski",
       wiek: 30,
     }
-    res.writeHead(200, { "Content-Type": "application/json; charset=utf-8" })
+    res.writeHead(200, {
+      "Content-Type": "application/json; charset=utf-8",
+    })
     res.end(JSON.stringify(data))
   } else if (req.url === "/html") {
     const html = `
@@ -33,10 +35,14 @@ const server = http.createServer((req, res) => {
   } else if (req.url === "/plik") {
     fs.readFile("strona.html", (err, data) => {
       if (err) {
-        res.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" })
+        res.writeHead(500, {
+          "Content-Type": "text/plain; charset=utf-8",
+        })
         res.end("Błąd serwera – nie udało się wczytać pliku")
       } else {
-        res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" })
+        res.writeHead(200, {
+          "Content-Type": "text/html; charset=utf-8",
+        })
         res.end(data)
       }
     })
